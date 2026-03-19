@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800 bg-primary;
+  }
+}
+
+@layer components {
+  /* Section label: small caps, subtle gray (reference: KONTAKTDATEN, DIENSTLEISTUNGEN) */
+  .section-label {
+    @apply text-xs font-medium uppercase tracking-section text-gray-500;
+  }
+  /* Subtle horizontal divider under headings */
+  .heading-divider {
+    @apply mt-4 w-12 border-t-2 border-gray-800;
+  }
+}
+
+.site-logo {
+  height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+@media (min-width: 768px) {
+  .site-logo {
+    height: 3.25rem;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-900 focus-visible:ring-offset-2;
+  }
+}
+
+/* Hero-Animationen Startseite: Fade-up beim ersten Laden (langsam, ruhig) */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroFadeUpButton {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-hero-title {
+  animation: heroFadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0s both;
+}
+
+.animate-hero-subtitle {
+  animation: heroFadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+.animate-hero-cta {
+  animation: heroFadeUpButton 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both;
+}
+
+/* Hero-Style Reveal: gleiche Animation wie Hero, ausgelöst beim Scrollen (einmal) */
+.hero-style-reveal-title,
+.hero-style-reveal-text,
+.hero-style-reveal-divider,
+.hero-style-reveal-cta {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+}
+
+.hero-style-reveal-cta {
+  transform: translateY(40px) scale(0.95);
+}
+
+.hero-style-reveal.in-view .hero-style-reveal-title {
+  animation: heroFadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0s both;
+}
+
+.hero-style-reveal.in-view .hero-style-reveal-divider {
+  animation: heroFadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.hero-style-reveal.in-view .hero-style-reveal-text {
+  animation: heroFadeUp 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+.hero-style-reveal.in-view .hero-style-reveal-cta {
+  animation: heroFadeUpButton 1.4s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both;
+}
+
+/* Willkommen-Überschrift: Einblendung von rechts nach links */
+@keyframes welcomeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Bild: Einblendung von links nach rechts (Gegenrichtung) */
+@keyframes welcomeSlideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-welcome-slide {
+  animation: welcomeSlideIn 1.7s cubic-bezier(0.22, 1, 0.36, 1) 0s both;
+}
+
+.animate-welcome-slide-text {
+  animation: welcomeSlideIn 1.7s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+
+.animate-welcome-slide-image {
+  animation: welcomeSlideInFromLeft 1.7s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+/* Leistungs-Karten: Einblendung beim Scrollen von unten nach oben */
+@keyframes cardSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card-anim-wrap {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.service-card-anim-wrap.in-view {
+  animation: cardSlideUp var(--card-duration, 1100ms) cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--card-delay, 0ms);
+}
+
+/* ========== Zentrale Reveal-Animationen (Config: lib/animationConfig.ts) ========== */
+@keyframes revealFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(var(--reveal-y, 50px));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealFadeUpScale {
+  from {
+    opacity: 0;
+    transform: translateY(var(--reveal-y, 40px)) scale(var(--reveal-scale-start, 0.98));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes revealFadeX {
+  from {
+    opacity: 0;
+    transform: translateX(var(--reveal-x, 60px));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 50px));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-fade-up,
+  .reveal-fade-up-scale,
+  .reveal-fade-x,
+  .reveal-fade-x-left,
+  .service-card-anim-wrap,
+  .hero-style-reveal-title,
+  .hero-style-reveal-text,
+  .hero-style-reveal-divider,
+  .hero-style-reveal-cta {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .animate-hero-title,
+  .animate-hero-subtitle,
+  .animate-hero-cta,
+  .animate-welcome-slide,
+  .animate-welcome-slide-text,
+  .animate-welcome-slide-image {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal-fade-up.in-view {
+  animation: revealFadeUp var(--reveal-duration, 1100ms) cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-fade-up-scale {
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 40px)) scale(var(--reveal-scale-start, 0.98));
+}
+
+.reveal-fade-up-scale.in-view {
+  animation: revealFadeUpScale var(--reveal-duration, 1400ms) cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-fade-x {
+  opacity: 0;
+  transform: translateX(var(--reveal-x, 60px));
+}
+
+.reveal-fade-x.in-view {
+  animation: revealFadeX var(--reveal-duration, 1700ms) cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-fade-x-left {
+  opacity: 0;
+  transform: translateX(calc(-1 * var(--reveal-x-left, 60px)));
+}
+
+.reveal-fade-x-left.in-view {
+  animation: revealFadeXLeft var(--reveal-duration, 1700ms) cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes revealFadeXLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(-1 * var(--reveal-x-left, 60px)));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
