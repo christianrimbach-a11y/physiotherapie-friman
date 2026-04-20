@@ -8,10 +8,19 @@ import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import { TREATMENTS } from "@/data/treatments";
 
+const CTA_SLIDESHOW_IMAGES = [
+  "/images/krankengymnastik.png",
+  "/images/stosswellentherapie.jpg",
+  "/images/manuelle-therapie.jpg",
+  "/images/lymphdrainage.jpg",
+  "/images/waerme-kaeltetherapie.jpg",
+  "/images/massage-techniken.jpg",
+];
+
 export const metadata: Metadata = {
   title: "Leistungen",
   description:
-    "Unsere Behandlungen: Krankengymnastik, Manuelle Therapie, Massage, Lymphdrainage, Wärme-/Kältetherapie, Stoßwellentherapie.",
+    "Physiotherapie Wutha-Farnroda: Bei uns erhalten Sie Krankengymnastik, manuelle Therapie, Massage, Lymphdrainage, Wärme-/Kältetherapie und Stoßwellentherapie zur Unterstützung bei Schmerzen, für Beweglichkeit, Rehabilitation und Prävention.",
 };
 
 export default function LeistungenPage() {
@@ -19,10 +28,10 @@ export default function LeistungenPage() {
     <>
       <Hero
         title="Unsere Behandlungen im Überblick."
-        subtitle="Therapien für Ihre Gesundheit und Mobilität."
-        images={["/images/placeholder.svg"]}
+        subtitle="Wir kombinieren bewährte und moderne Verfahren, damit Sie sich wieder freier bewegen können und wir Sie bei der Linderung von Schmerzen unterstützen."
+        images={CTA_SLIDESHOW_IMAGES}
         showCta={false}
-        compact
+        heightClassName="min-h-[70vh]"
         scrollReveal
       />
 
@@ -33,9 +42,7 @@ export default function LeistungenPage() {
           </h2>
           <div className="hero-style-reveal-divider heading-divider mx-auto mt-4" aria-hidden="true" />
           <p className="hero-style-reveal-text mt-4 text-gray-600 leading-relaxed">
-            Wir bieten ein breites Spektrum an physiotherapeutischen Behandlungen –
-            von der Akutbehandlung bis zur langfristigen Rehabilitation und
-            Prävention.
+            Bei uns steht Ihre Behandlung im Mittelpunkt, von der Akutversorgung über gezielte Rehabilitation bis zur vorausschauenden Prävention. Wir begleiten Sie dabei, Beschwerden zu reduzieren, Beweglichkeit zu verbessern und Kraft für den Alltag aufzubauen.
           </p>
         </HeroStyleReveal>
       </section>
@@ -91,8 +98,8 @@ export default function LeistungenPage() {
 
       <CTASectionReveal
         title="Gemeinsam den richtigen Weg für Ihre Therapie finden"
-        subtitle="Jede Behandlung beginnt mit einem persönlichen Gespräch. Wir nehmen uns Zeit für Ihre Beschwerden, Ihre Fragen und Ihre Ziele. Lassen Sie uns gemeinsam herausfinden, welche Therapie Sie am besten unterstützt."
-        buttonText="Termin anfragen"
+        subtitle="Jede Behandlung startet bei uns mit einem echten Gespräch: Wir hören zu, klären Ihre Beschwerden und erläutern die nächsten Schritte. Gemeinsam finden wir heraus, welche Therapie in Wutha-Farnroda für Sie am sinnvollsten ist, damit Sie Ihre Fortschritte nachvollziehen können."
+        buttonText="03692127026"
         backgroundImages={[
           "/images/krankengymnastik.png",
           "/images/stosswellentherapie.jpg",

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { NAV_LINKS_FOOTER, SITE_NAME, CONTACT, LOGO_PATH } from "@/lib/constants";
+import ConsentAwareMapEmbed from "@/components/sections/ConsentAwareMapEmbed";
 
 export default function Footer() {
   return (
@@ -74,16 +75,10 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/20 w-screen relative left-1/2 -ml-[50vw] pr-4 sm:pr-6 lg:pr-8 pl-4 sm:pl-6 lg:pl-8">
           <div className="max-w-[1600px] mx-auto rounded-card overflow-hidden h-[220px] sm:h-[280px] md:h-[340px]">
-            <iframe
+            <ConsentAwareMapEmbed
               title="Standort Physiotherapie Friman Wutha-Farnroda auf Google Maps"
-              src={CONTACT.mapsUrl}
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-full"
+              mapsUrl={CONTACT.mapsUrl}
+              mapsLink={CONTACT.mapsLink}
             />
           </div>
         </div>

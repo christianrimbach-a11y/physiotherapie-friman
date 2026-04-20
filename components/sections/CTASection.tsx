@@ -13,8 +13,8 @@ const DEFAULT_BG = "/images/placeholder.svg";
 
 export default function CTASection({
   title = "Bereit für Ihren Termin?",
-  subtitle = "Vereinbaren Sie jetzt einen Termin in unserer Praxis. Wir freuen uns auf Sie.",
-  buttonText = "Termin vereinbaren",
+  subtitle = "Wir freuen uns auf Sie in Wutha-Farnroda. Rufen Sie uns an. Gemeinsam finden wir einen Termin, der zu Ihrer Behandlung passt.",
+  buttonText = "03692127026",
   backgroundImage = DEFAULT_BG,
   className = "",
 }: CTASectionProps) {
@@ -45,7 +45,7 @@ export default function CTASection({
           </p>
         )}
         <div className="mt-8">
-          <Button href="/buchung" variant="primaryInvert" showArrow aria-label={buttonText}>
+          <Button href="tel:03692127026" variant="primaryInvert" showArrow aria-label={buttonText}>
             {buttonText}
           </Button>
         </div>

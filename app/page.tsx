@@ -12,6 +12,13 @@ import { TESTIMONIALS } from "@/data/testimonials";
 import Image from "next/image";
 import { HERO_REVEAL_DURATION_MS } from "@/lib/animationConfig";
 
+/** Homepage Hero-Slideshow: 1 Außenansicht, 2 Team, 3 Rezeption innen (Autoplay & Punkte über Hero bei images.length > 1). */
+const HOME_HERO_BACKGROUND_IMAGES = [
+  "/images/home-hero-01-aussenansicht.png",
+  "/images/home-hero-02-team.png",
+  "/images/home-hero-03-rezeption-innen.png",
+] as const;
+
 export default function HomePage() {
   const previewTreatments = TREATMENTS.slice(0, 6);
   const previewTestimonials = TESTIMONIALS.slice(0, 6);
@@ -19,30 +26,33 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        title="Physiotherapie Friman – Gemeinsam zurück zu mehr Beweglichkeit und Lebensqualität"
-        subtitle="Ihre erfahrenen Physiotherapeuten in Wutha-Farnroda begleiten Sie individuell, persönlich und mit modernen Behandlungsmethoden. Von der akuten Beschwerde bis zur nachhaltigen Prävention."
+        title="Physiotherapie Friman: Gemeinsam zurück zu mehr Beweglichkeit und Lebensqualität"
+        subtitle="Wir begleiten Sie in Wutha-Farnroda als Physiotherapeuten persönlich und fachlich fundiert, mit moderner Behandlung, gezielter Unterstützung bei Schmerzen und einem klaren Fokus auf Ihre Beweglichkeit, Rehabilitation und langfristige Prävention."
         showCta
         align="left"
         variant="homepage"
+        images={[...HOME_HERO_BACKGROUND_IMAGES]}
+        imageObjectPositionsCss={["center 24%", "center center", "center 32%"]}
+        heightClassName="min-h-[75vh]"
       />
 
       <SectionWrapper size="large" className="bg-offWhite">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <Reveal variant="fadeX" durationMs={1700}>
-              <h2 className="text-3xl font-bold text-gray-900">Willkommen in unserer Praxis für Physiotherapie in Wutha-Farnroda</h2>
+              <h2 className="text-3xl font-bold text-gray-900">Herzlich Willkommen</h2>
             </Reveal>
             <div className="heading-divider" aria-hidden="true" />
             <Reveal variant="fadeX" delayMs={250} durationMs={1700}>
               <div>
                 <p className="mt-4 text-gray-600 leading-relaxed">
-                  Herzlich willkommen bei Physiotherapie Friman! Als erfahrene Physiotherapeuten in Wutha-Farnroda nehmen wir uns Zeit, Ihre Beschwerden genau zu verstehen und gemeinsam mit Ihnen einen individuellen Behandlungsplan zu entwickeln. Unser Ziel ist es, Schmerzen zu lindern, Beweglichkeit wiederherzustellen und langfristig Ihre Gesundheit zu stärken.
+                  Herzlich willkommen! Bei uns in Wutha-Farnroda nehmen wir uns die Zeit, Ihre Beschwerden wirklich zu verstehen. Gemeinsam mit Ihnen entwickeln wir einen Behandlungsplan, der zu Ihrem Alltag passt: Wir unterstützen Sie dabei, Schmerzen zu lindern, Beweglichkeit zu verbessern und Ihre Kraft zu stärken.
                 </p>
                 <p className="mt-4 text-gray-600 leading-relaxed">
-                  Ganz gleich, ob Sie nach einer Operation Unterstützung benötigen, unter Rücken- oder Gelenkbeschwerden leiden oder präventiv etwas für Ihren Körper tun möchten: Wir begleiten Sie Schritt für Schritt auf dem Weg zurück zu mehr Aktivität und Wohlbefinden. Dabei verbinden wir fundiertes physiotherapeutisches Fachwissen mit modernen Therapieansätzen und einer persönlichen, vertrauensvollen Betreuung.
+                  Ob Rehabilitation nach einer Operation, akute Rücken- oder Gelenkbeschwerden oder bewusste Prävention: Wir stehen an Ihrer Seite und erklären jeden Schritt verständlich. Unser Team verbindet erprobte Methoden mit aktuellen Ansätzen der Physiotherapie, damit Sie sich wieder freier bewegen und sicher im Körper ankommen können.
                 </p>
                 <p className="mt-4 text-gray-600 leading-relaxed">
-                  Physiotherapie bedeutet für uns nicht nur Behandlung, sondern Hilfe zur Selbsthilfe, damit Sie sich auch im Alltag wieder sicher und beweglich fühlen.
+                  Für uns geht es nicht nur um einzelne Termine, sondern um echte Hilfe zur Selbsthilfe: damit Sie Alltag, Arbeit und Freizeit wieder mit gutem Gefühl meistern können.
                 </p>
               </div>
             </Reveal>
@@ -71,10 +81,10 @@ export default function HomePage() {
         <LeistungenTeaserReveal
           heading={
             <>
-              <h2 className="text-3xl font-bold text-gray-900">Unser Leistungsangebot – Physiotherapie in Wutha-Farnroda individuell auf Sie abgestimmt</h2>
+              <h2 className="text-3xl font-bold text-gray-900">Unser Leistungsangebot: Physiotherapie in Wutha-Farnroda, individuell für Sie</h2>
               <div className="heading-divider mx-auto mt-4" aria-hidden="true" />
               <p className="mt-4 text-gray-600">
-                In unserer Praxis für Physiotherapie erwartet Sie ein breites Spektrum moderner Behandlungsmethoden. Unsere Physiotherapeuten entwickeln für jeden Patienten ein persönliches Therapiekonzept – abgestimmt auf Beschwerden, Lebenssituation und Behandlungsziel. Ob akute Schmerzen, Rehabilitation oder Prävention: Wir begleiten Sie mit fachlicher Kompetenz auf Ihrem Weg zurück zu mehr Beweglichkeit und Lebensqualität.
+                Bei uns erwartet Sie ein durchdachtes Spektrum moderner Behandlung, von Krankengymnastik und manueller Therapie bis zu weiteren Verfahren, die genau zu Ihrer Situation passen. Wir erstellen mit Ihnen ein klares Konzept: ob Sie akute Schmerzen lindern möchten, Ihre Beweglichkeit verbessern oder gezielt rehabilitieren und präventiv vorsorgen wollen.
               </p>
             </>
           }
@@ -100,7 +110,7 @@ export default function HomePage() {
           <Reveal variant="fadeXLeft" delayMs={350} durationMs={1700} className="order-2 md:order-1">
             <div className="relative aspect-[4/3] rounded-card overflow-hidden bg-gray-200">
               <Image
-                src="/images/placeholder.svg"
+                src="/images/home-team-section.jpg"
                 alt=""
                 fill
                 className="object-cover"
@@ -110,19 +120,19 @@ export default function HomePage() {
           </Reveal>
           <div className="order-1 md:order-2">
             <Reveal variant="fadeXLeft" delayMs={0} durationMs={1700}>
-              <h2 className="text-3xl font-bold text-gray-900">Unser Team – Kompetenz, Erfahrung und Einfühlungsvermögen</h2>
+              <h2 className="text-3xl font-bold text-gray-900">Unser Team: erfahren, einfühlsam, für Sie da</h2>
               <div className="heading-divider" aria-hidden="true" />
             </Reveal>
             <Reveal variant="fadeXLeft" delayMs={180} durationMs={1700}>
               <div>
                 <p className="mt-4 text-gray-600 leading-relaxed">
-                  Unser Team besteht aus den beiden Physiotherapeuten Inna und Rudi Friman, die ihre fachliche Kompetenz mit echter Leidenschaft für Bewegung und Gesundheit verbinden. Als Praxisinhaber begleiten sie ihre Patientinnen und Patienten persönlich und mit viel Erfahrung auf dem Weg zu mehr Beweglichkeit und Wohlbefinden.
+                  Wir sind Inna und Rudi Friman, zwei Physiotherapeuten, die Bewegung, Gesundheit und Menschen mit gleicher Leidenschaft verbinden. Wir führen die Physiotherapie Friman gemeinsam und sind direkt für Sie da: persönlich, erfahren und mit dem Ziel, Ihre Beweglichkeit zu fördern und Beschwerden zu lindern.
                 </p>
                 <p className="mt-4 text-gray-600 leading-relaxed">
-                  Durch regelmäßige Fort- und Weiterbildungen sowie zusätzliche Qualifikationen in verschiedenen physiotherapeutischen Behandlungsmethoden verfügen beide über fundierte Kenntnisse in den Therapiebereichen unserer Praxis. Von der Krankengymnastik über manuelle Therapie bis hin zu weiteren modernen Behandlungstechniken.
+                  Fort- und Weiterbildungen sind für uns selbstverständlich, damit wir Sie in allen Bereichen unserer Arbeit kompetent unterstützen können, von klassischer Krankengymnastik und manueller Therapie bis zu spezialisierten Techniken, die Ihre Rehabilitation oder Prävention sinnvoll ergänzen.
                 </p>
                 <p className="mt-4 text-gray-600 leading-relaxed">
-                  Bei uns erwartet Sie eine individuelle Behandlung in vertrauensvoller Atmosphäre, mit dem Ziel, Ihre Beweglichkeit nachhaltig zu verbessern und Ihre Gesundheit langfristig zu stärken.
+                  Bei uns zählt Vertrauen: Sie erhalten eine Behandlung, die zu Ihnen passt, mit dem Ziel, Ihre Beweglichkeit zu verbessern und Sie in Ihrer Alltagsbelastbarkeit zu stärken.
                 </p>
               </div>
             </Reveal>
@@ -141,7 +151,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-gray-900">Das sagen unsere Patientinnen und Patienten</h2>
             <div className="heading-divider mx-auto mt-4" aria-hidden="true" />
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Vertrauen und Zufriedenheit stehen bei uns an erster Stelle.
+              Ihr Feedback motiviert uns täglich. Hier lesen Sie, was Patientinnen und Patienten über ihre Behandlung bei uns erzählen.
             </p>
           </div>
           <TestimonialsSlider testimonials={previewTestimonials} />
@@ -151,7 +161,7 @@ export default function HomePage() {
       <Reveal variant="fadeUp" durationMs={HERO_REVEAL_DURATION_MS}>
         <CTASection
           title="Bereit für den nächsten Schritt?"
-          subtitle="Ob akute Beschwerden, Rehabilitation oder präventive Behandlung – wir sind für Sie da. Vereinbaren Sie jetzt Ihren Termin in unserer Praxis für Physiotherapie in Wutha-Farnroda."
+          subtitle="Ob akute Beschwerden, gezielte Rehabilitation oder vorausschauende Prävention: Wir begleiten Sie in Wutha-Farnroda gern weiter. Rufen Sie uns an. Gemeinsam finden wir den passenden nächsten Schritt für Ihre Behandlung."
           backgroundImage="/images/cta-bereit-fuer-den-schritt.jpg"
         />
       </Reveal>

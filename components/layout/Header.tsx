@@ -3,7 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { NAV_LINKS, SOCIAL_LINKS, LOGO_PATH, CONTACT } from "@/lib/constants";
+import {
+  NAV_LINKS,
+  SOCIAL_LINKS,
+  LOGO_PATH,
+  CONTACT,
+  OPENING_HOURS_HEADER_DESKTOP_LINE,
+} from "@/lib/constants";
 
 function SocialIcons() {
   return (
@@ -43,7 +49,7 @@ export default function Header() {
       role="banner"
     >
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-16 md:h-20 gap-2">
           <Link
             href="/"
             className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-sm"
@@ -78,11 +84,17 @@ export default function Header() {
             </nav>
             <a
               href={`tel:${CONTACT.phone.replace(/\s/g, "")}`}
-              className="flex items-center gap-2 shrink-0 text-sm text-white/90 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-button whitespace-nowrap leading-none"
+              className="flex items-center gap-2 shrink-0 text-sm text-white hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-button whitespace-nowrap leading-none"
               aria-label="Telefonnummer anrufen"
             >
-              <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  stroke="#FFFFFF"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
               </svg>
               <span className="font-medium leading-none">{CONTACT.phone}</span>
             </a>
@@ -109,10 +121,23 @@ export default function Header() {
           </button>
         </div>
 
+        <p className="md:hidden text-center text-[10px] sm:text-[11px] leading-snug text-white/55 pb-1.5 -mt-0.5">
+          Mo–Fr · Öffnungszeiten im Menü
+        </p>
+
+        <div
+          className="hidden md:block border-t border-white/10 py-1.5"
+          aria-label="Öffnungszeiten"
+        >
+          <p className="text-center xl:text-right text-[11px] lg:text-xs text-white/60 tracking-wide">
+            {OPENING_HOURS_HEADER_DESKTOP_LINE}
+          </p>
+        </div>
+
         <div
           id="mobile-menu"
           className={`md:hidden overflow-hidden transition-all duration-300 ${
-            mobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+            mobileMenuOpen ? "max-h-[28rem] opacity-100" : "max-h-0 opacity-0"
           }`}
           aria-hidden={!mobileMenuOpen}
         >
@@ -132,6 +157,23 @@ export default function Header() {
                 {label}
               </Link>
             ))}
+            <div
+              className="pt-3 mt-1 border-t border-white/15"
+              role="group"
+              aria-label="Öffnungszeiten"
+            >
+              <p className="text-[11px] font-medium text-white/90 uppercase tracking-wide">
+                Öffnungszeiten
+              </p>
+              <ul className="mt-2 space-y-1.5 text-xs text-white/75">
+                {CONTACT.openingHours.map(({ days, hours }) => (
+                  <li key={days} className="flex justify-between gap-4 max-w-xs">
+                    <span className="shrink-0">{days}</span>
+                    <span className="text-right">{hours}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             <div className="pt-4 flex gap-4">
               <SocialIcons />
             </div>

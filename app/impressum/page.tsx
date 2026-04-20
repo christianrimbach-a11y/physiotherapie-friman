@@ -36,8 +36,6 @@ export default function ImpressumPage() {
             Vertreten durch
           </h2>
           <p className="text-gray-600">
-            Inna Friman
-            <br />
             Rudi Friman
           </p>
         </section>
@@ -70,7 +68,7 @@ export default function ImpressumPage() {
             Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
           </h2>
           <p className="text-gray-600">
-            Inna Friman, Rudi Friman
+            Rudi Friman
             <br />
             Ruhlaer Straße 121–123, 99848 Wutha-Farnroda, Deutschland
           </p>

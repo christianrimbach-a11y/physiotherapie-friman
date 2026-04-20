@@ -8,7 +8,7 @@ import { HERO_REVEAL_DURATION_MS } from "@/lib/animationConfig";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Kontaktieren Sie die Physiotherapie Frimann – Telefon, E-Mail, Adresse und Öffnungszeiten.",
+    "Kontakt Physiotherapie Friman Wutha-Farnroda: Telefon, E-Mail, Adresse und Öffnungszeiten. Wir beantworten Ihre Fragen zur Behandlung und Terminvereinbarung gern persönlich.",
 };
 
 export default function KontaktPage() {
@@ -20,8 +20,7 @@ export default function KontaktPage() {
           <h1 className="text-3xl font-bold text-gray-900 mt-2">So erreichen Sie uns</h1>
           <div className="heading-divider" aria-hidden="true" />
           <p className="mt-4 text-gray-600 max-w-2xl">
-            Wir freuen uns auf Ihre Nachricht. Rufen Sie uns an, schreiben Sie eine
-            E-Mail oder nutzen Sie das Kontaktformular.
+            Wir freuen uns, von Ihnen zu hören. Ob kurze Rückfrage zur Behandlung oder Terminwunsch: Rufen Sie uns an, schreiben Sie uns oder nutzen Sie das Formular. Wir melden uns schnellstmöglich bei Ihnen.
           </p>
         </Reveal>
 

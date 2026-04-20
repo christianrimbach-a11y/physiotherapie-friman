@@ -9,7 +9,7 @@ import { TEAM } from "@/data/team";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "Lernen Sie das Team der Physiotherapie Frimann kennen – erfahrene Therapeuten für Ihre Gesundheit.",
+    "Lernen Sie unser Team kennen: Physiotherapie Friman in Wutha-Farnroda mit persönlicher Betreuung, erfahrenen Physiotherapeuten und moderner Behandlung für Ihre Beweglichkeit.",
 };
 
 export default function UeberUnsPage() {
@@ -17,37 +17,29 @@ export default function UeberUnsPage() {
     <>
       <Hero
         title="Über uns"
-        subtitle="Unser Team – Ihr Ansprechpartner für Bewegung und Gesundheit."
-        images={["/images/placeholder.svg"]}
+        subtitle="Wir sind für Sie da, mit Erfahrung, Zeit und echtem Interesse an Ihrer Beweglichkeit."
+        images={["/images/ueber-uns-team.jpg"]}
+        imageObjectPositionsCss={["center 30%"]}
         showCta={false}
         compact
         scrollReveal
       />
 
-      <SectionWrapper size="large" className="bg-offWhite">
+      <SectionWrapper size="large" className="bg-offWhite !pt-12 pb-24 md:!pt-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="max-w-[860px]">
             <Reveal variant="fadeX" durationMs={1700}>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Willkommen bei der Physiotherapie Friman
+                Unsere Geschichte
               </h2>
             </Reveal>
             <Reveal variant="fadeX" delayMs={180} durationMs={1700}>
               <div>
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  Schön, dass Sie da sind. In unserer Praxis in Wutha-Farnroda begleiten wir Sie mit moderner Physiotherapie, persönlicher Betreuung und einem klaren Ziel: mehr Beweglichkeit, weniger Schmerzen und ein gutes Körpergefühl im Alltag.
-                </p>
-                <h3 className="mt-8 text-lg font-semibold text-gray-900">
-                  Unsere Geschichte
-                </h3>
-                <p className="mt-3 text-gray-600 leading-relaxed">
-                  Die Physiotherapie Friman ist ein Familienbetrieb, der aus der gemeinsamen Leidenschaft von Inna und Rudi Friman für Bewegung, Gesundheit und persönliche Betreuung entstanden ist. Bereits zuvor bestand eine kleinere Praxis, aus der sich mit der Zeit der Wunsch entwickelte, Patientinnen und Patienten noch umfassender behandeln zu können.
+                <p className="mt-8 text-gray-600 leading-relaxed">
+                  Physiotherapie Friman ist unser Familienbetrieb. Der Betrieb entstand aus der gemeinsamen Leidenschaft von uns für Bewegung, Gesundheit und echte Nähe zu den Menschen, die zu uns kommen. Aus einem kleineren Ambiente wuchs der Wunsch, Sie noch umfassender und flexibler behandeln zu können.
                 </p>
                 <p className="mt-4 text-gray-600 leading-relaxed">
-                  Mit der neuen, größeren Praxis wurde dieser Schritt verwirklicht. Heute bietet die Physiotherapie Friman ein erweitertes Spektrum moderner Behandlungsmethoden und mehr Raum für individuelle Therapie und aktive Rehabilitation.
-                </p>
-                <p className="mt-4 text-gray-600 leading-relaxed">
-                  Trotz des Wachstums bleibt eines unverändert: die persönliche Atmosphäre einer familiengeführten Praxis, in der sich Zeit für jeden einzelnen Patienten genommen wird und die Behandlung individuell auf die jeweiligen Bedürfnisse abgestimmt ist.
+                  Heute heißen wir Sie in größeren, hellen Räumen willkommen und können ein erweitertes Angebot an Behandlungen anbieten, mit mehr Platz für individuelle Therapie, aktive Rehabilitation und die Methoden, die sich für Sie gerade anbieten.
                 </p>
               </div>
             </Reveal>
@@ -55,12 +47,13 @@ export default function UeberUnsPage() {
           <Reveal variant="fadeX" delayMs={350} durationMs={1700}>
             <div className="relative aspect-[4/3] md:aspect-[3/4] rounded-card overflow-hidden bg-gray-200">
               <Image
-                src="/images/placeholder.svg"
+                src="/images/ueber-uns-team.jpg"
                 alt=""
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 quality={95}
+                style={{ objectPosition: "60% center" }}
               />
             </div>
           </Reveal>
@@ -70,7 +63,7 @@ export default function UeberUnsPage() {
       <SectionWrapper size="large" className="bg-primary">
         <Reveal variant="fadeXLeft" durationMs={1700}>
           <div className="text-center mt-12 mb-16 md:mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Unser Team – Kompetenz, Erfahrung und Einfühlungsvermögen</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Unser Team</h2>
             <div className="heading-divider mx-auto mt-4" aria-hidden="true" />
           </div>
         </Reveal>

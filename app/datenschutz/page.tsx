@@ -12,7 +12,7 @@ export default function DatenschutzPage() {
     <SectionWrapper size="large" className="pt-12">
       <h1 className="text-3xl font-bold text-gray-900">Datenschutzerklärung</h1>
       <p className="mt-2 text-sm text-gray-600">
-        Stand: Platzhalter – bitte durch aktuelles Datum ersetzen.
+        Stand: 30.03.2026
       </p>
 
       <div className="mt-12 space-y-10 text-gray-600">
@@ -104,7 +104,7 @@ export default function DatenschutzPage() {
 
         <p className="text-sm text-gray-500 pt-4">
           Bitte ersetzen Sie diese Platzhaltertexte durch eine von einem
-          Anwalt geprüfte, auf Ihre Praxis zugeschnittene
+          Anwalt geprüfte, auf Physiotherapie Friman zugeschnittene
           Datenschutzerklärung.
         </p>
       </div>

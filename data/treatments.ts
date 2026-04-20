@@ -34,15 +34,15 @@ export const TREATMENTS: Treatment[] = [
     slug: "krankengymnastik",
     title: "Krankengymnastik",
     shortDescription:
-      "Die Krankengymnastik ist ein zentraler Bestandteil der modernen Physiotherapie. In unserer Praxis für Physiotherapie in Wutha-Farnroda setzen wir sie gezielt ein, um Beweglichkeit zu verbessern, Schmerzen zu lindern und den Körper wieder in ein natürliches Gleichgewicht zu bringen. Jeder Therapieplan wird individuell auf Ihre Beschwerden, Ihre Belastbarkeit und Ihre persönlichen Ziele abgestimmt.",
+      "Die Krankengymnastik ist bei uns in Wutha-Farnroda ein zentraler Bestandteil der Physiotherapie: Wir unterstützen Sie dabei, Beweglichkeit zu verbessern, Schmerzen zu lindern und Stabilität im Alltag aufzubauen. Ihr Plan entsteht gemeinsam mit uns, abgestimmt auf Beschwerden, Belastbarkeit, Rehabilitation oder Prävention.",
     hasDetailPage: true,
     image: "/images/krankengymnastik.png",
     benefits: ["Schmerzlinderung", "Beweglichkeit", "Individuell"],
     detail: {
       whatIs:
-        "Die Krankengymnastik umfasst aktive und passive Übungen zur Behandlung von Funktionsstörungen des Bewegungsapparates. Sie kommt nach Verletzungen, Operationen oder bei chronischen Beschwerden zum Einsatz. Ergänzend können Techniken wie Faszientherapie, Triggerpunktbehandlung oder stabilisierende Trainingsübungen integriert werden.",
+        "Die Krankengymnastik verbindet aktive und passive Übungen zur Behandlung von Funktionsstörungen des Bewegungsapparates, etwa nach Verletzungen und Operationen oder bei chronischen Beschwerden. Bei uns können wir sinnvoll ergänzen: Faszientherapie, Triggerpunktbehandlung oder stabilisierendes Training.",
       howItWorks:
-        "Nach einer ausführlichen Befundaufnahme erstellen wir ein individuelles Übungsprogramm. Durch Mobilisation, Kräftigung, Koordinations- und Haltungstraining wird der Körper Schritt für Schritt wieder belastbarer. Ziel ist es, nicht nur Symptome zu behandeln, sondern die Ursachen nachhaltig zu verbessern.",
+        "Nach einer ausführlichen Befundaufnahme entwickeln wir mit Ihnen ein Übungsprogramm, das zu Ihrem Alltag passt. Über Mobilisation, Kräftigung sowie Koordinations- und Haltungstraining unterstützen wir Sie dabei, Schritt für Schritt wieder belastbarer zu werden. Neben den aktuellen Symptomen berücksichtigen wir mit Ihnen auch zugrunde liegende Faktoren wie Haltung, Belastung und Alltagsbewegungen.",
       forWhom:
         "Für Menschen mit Rücken- oder Gelenkbeschwerden, nach Operationen oder Unfällen, bei Fehlhaltungen, Bewegungseinschränkungen oder zur Prävention neuer Beschwerden.",
       forWhomHeading: "Für wen ist Krankengymnastik geeignet?",
@@ -61,16 +61,16 @@ export const TREATMENTS: Treatment[] = [
     slug: "manuelle-therapie",
     title: "Manuelle Therapie",
     shortDescription:
-      "Die Manuelle Therapie ist eine spezialisierte Behandlung zur gezielten Lösung von Blockaden und Funktionsstörungen. Durch präzise Handgrifftechniken verbessern wir die Beweglichkeit von Gelenken und reduzieren Schmerzen effektiv und schonend.",
+      "Mit manueller Therapie arbeiten wir bei Ihnen gezielt an Blockaden und Bewegungseinschränkungen: präzise, schonend und zielorientiert, mit dem Ziel, Schmerzen zu lindern und Ihre Beweglichkeit in Wutha-Farnroda zu verbessern.",
     shortDescriptionEmphasize: ["Manuelle Therapie"],
     hasDetailPage: true,
     image: "/images/manuelle-therapie.jpg",
     benefits: ["Schmerzlinderung", "Beweglichkeit", "Individuell"],
     detail: {
       whatIs:
-        "Sie ist eine physiotherapeutische Methode zur Untersuchung und Behandlung von Gelenk-, Muskel- und Nervenfunktionen. Auch ergänzende Verfahren wie CMD-Behandlungen, Faszientechniken oder Triggerpunkttherapie können Bestandteil sein.",
+        "Die manuelle Therapie ist eine physiotherapeutische Methode zur Untersuchung und Behandlung von Gelenk-, Muskel- und Nervenfunktionen. Auf Wunsch und Befund ergänzen wir sie bei uns durch Verfahren wie CMD-Behandlungen, Faszientechniken oder Triggerpunkttherapie.",
       howItWorks:
-        "Durch gezielte Mobilisationen und sanfte Impulse werden Bewegungseinschränkungen gelöst. Muskeln werden entspannt, Gelenke stabilisiert und das Zusammenspiel des Bewegungsapparates verbessert.",
+        "Mit gezielten Mobilisationen und sanften Impulsen behandeln wir Bewegungseinschränkungen. Wir entspannen belastete Muskulatur, unterstützen stabile Gelenkführung und verbessern das Zusammenspiel Ihres Bewegungsapparates, damit Sie sich wieder freier bewegen können.",
       forWhom:
         "Bei Rücken-, Schulter- oder Nackenbeschwerden, Kieferproblemen, Bewegungseinschränkungen oder nach Verletzungen.",
       forWhomHeading: "Für wen ist die Manuelle Therapie geeignet?",
@@ -90,7 +90,7 @@ export const TREATMENTS: Treatment[] = [
     slug: "massage-weichteiltechniken",
     title: "Massage / Weichteiltechniken",
     shortDescription:
-      "Massagen sind ein wichtiger Bestandteil der physiotherapeutischen Behandlung und dienen weit mehr als nur der Entspannung. Sie unterstützen gezielt die Regeneration von Muskeln und Gewebe.",
+      "Massage und Weichteiltechniken ergänzen Ihre physiotherapeutische Behandlung sinnvoll: Wir behandeln verspannte Strukturen, fördern die Durchblutung und unterstützen die Regeneration, damit Sie sich im Alltag entlasteter fühlen können.",
     hasDetailPage: true,
     image: "/images/massage-techniken.jpg",
     benefits: ["Entspannung", "Durchblutung", "Individuell"],
@@ -98,7 +98,7 @@ export const TREATMENTS: Treatment[] = [
       whatIs:
         "Zum Einsatz kommen klassische Massagen, Bindegewebsmassagen sowie Triggerpunkt- und Faszienbehandlungen. Diese Techniken lösen Verspannungen, verbessern die Durchblutung und fördern den Stoffwechsel im Gewebe.",
       howItWorks:
-        "Durch gezielte Grifftechniken werden verhärtete Muskelbereiche gelockert, Schmerzen reduziert und die Elastizität des Gewebes verbessert.",
+        "Mit gezielten Grifftechniken lockern wir verhärtete Bereiche, reduzieren Schmerzen und verbessern die Elastizität Ihres Gewebes. So begleiten wir Sie sinnvoll vor oder nach weiteren Schritten Ihrer Therapie.",
       forWhom:
         "Bei muskulären Verspannungen, stressbedingten Beschwerden, Fehlhaltungen oder zur Unterstützung anderer Therapien.",
       forWhomHeading: "Wann sind Massage- und Weichteiltechniken geeignet?",
@@ -118,7 +118,7 @@ export const TREATMENTS: Treatment[] = [
     slug: "lymphdrainage",
     title: "Lymphdrainage",
     shortDescription:
-      "Die manuelle Lymphdrainage ist eine besonders sanfte Therapieform zur Entstauung von Gewebe und zur Unterstützung des Heilungsprozesses nach Operationen oder Verletzungen.",
+      "Mit manueller Lymphdrainage begleiten wir Sie sanft bei der Entstauung von Ödemen, etwa nach Operationen oder Verletzungen, und unterstützen Ihr Gewebe mit einer ruhigen, gut abgestimmten Behandlung.",
     hasDetailPage: true,
     image: "/images/lymphdrainage.jpg",
     benefits: ["Entstauung", "Heilung", "Individuell"],
@@ -146,7 +146,7 @@ export const TREATMENTS: Treatment[] = [
     slug: "waerme-kaeltetherapie",
     title: "Wärme-/Kältetherapie",
     shortDescription:
-      "Thermotherapien unterstützen die physiotherapeutische Behandlung gezielt und bereiten Muskeln und Gewebe optimal auf weitere Maßnahmen vor.",
+      "Wärme und Kälte setzen wir gezielt ein, um Ihre physiotherapeutische Behandlung zu unterstützen: Wir bereiten Gewebe vor, lindern Beschwerden und können nachfolgende Therapieschritte sinnvoll ergänzen.",
     hasDetailPage: true,
     image: "/images/waerme-kaeltetherapie.jpg",
     benefits: ["Schmerzlinderung", "Durchblutung", "Individuell"],
@@ -154,7 +154,7 @@ export const TREATMENTS: Treatment[] = [
       whatIs:
         "Anwendungen wie Heißluft, Fangopackungen, Elektrotherapie oder Ultraschall fördern die Durchblutung, entspannen die Muskulatur und unterstützen Heilungsprozesse.",
       howItWorks:
-        "Wärme lockert das Gewebe und steigert die Durchblutung, während Kälte entzündungshemmend wirkt. Physikalische Therapien erreichen zusätzlich tieferliegende Strukturen.",
+        "Wärme lockert das Gewebe und steigert die Durchblutung, Kälte kann entzündungshemmend wirken. Ergänzend setzen wir physikalische Therapien ein, um tiefer liegende Strukturen gezielt mit einzubeziehen, abgestimmt auf Ihre jeweilige Behandlung.",
       forWhom:
         "Bei Muskelverspannungen, Gelenkbeschwerden, Reizzuständen oder zur Vorbereitung weiterer Therapien.",
       forWhomHeading: "Wann ist eine Wärme- oder Kältetherapie geeignet?",
@@ -174,7 +174,7 @@ export const TREATMENTS: Treatment[] = [
     slug: "stosswellentherapie",
     title: "Stoßwellentherapie",
     shortDescription:
-      "Die Stoßwellentherapie ist eine moderne Behandlungsmethode zur gezielten Behandlung von Schmerzen im Bewegungsapparat. Durch hochenergetische Schallwellen werden Heilungsprozesse im Gewebe angeregt und chronische Beschwerden effektiv behandelt.",
+      "Die Stoßwellentherapie ist eine moderne Behandlungsoption bei uns: Gezielt bei Beschwerden im Bewegungsapparat setzen wir hochenergetische Schallwellen ein, um körpereigene Regenerationsprozesse anzuregen und chronische Schmerzen zu mildern.",
     hasDetailPage: true,
     image: "/images/stosswellentherapie.jpg",
     benefits: ["Schmerzlinderung", "Regeneration", "Individuell"],
@@ -183,7 +183,7 @@ export const TREATMENTS: Treatment[] = [
         "Die Stoßwellentherapie nutzt gezielte Druckwellen, um schmerzhafte Bereiche im Körper zu behandeln. Sie fördert die Durchblutung, regt die Regeneration von Sehnen und Muskeln an und kann Verkalkungen oder hartnäckige Entzündungen positiv beeinflussen.",
       whatIsHeading: "Was ist Stoßwellentherapie?",
       howItWorks:
-        "Während der Behandlung werden Stoßwellen über ein spezielles Gerät auf die betroffene Körperregion übertragen. Die Impulse regen die natürlichen Heilungsprozesse des Körpers an und können Schmerzen deutlich reduzieren.",
+        "Während der Behandlung leiten wir Stoßwellen mit einem speziellen Gerät gezielt auf die betroffene Region. Die Impulse unterstützen die natürlichen Regenerationsprozesse Ihres Körpers. Viele Patientinnen und Patienten berichten von weniger Schmerzen und mehr Bewegungsfreiheit.",
       forWhom:
         "Bei chronischen Schmerzen im Bewegungsapparat, Sehnenbeschwerden, Verspannungen oder zur Unterstützung der Heilung nach Verletzungen.",
       forWhomHeading: "Für wen ist die Stoßwellentherapie geeignet?",

@@ -10,6 +10,16 @@ interface HeroProps {
   subtitle?: string;
   label?: string;
   images?: string[];
+  /** Optional: Hintergrundbild als CSS (kein next/image) */
+  backgroundImageCss?: string | null;
+  /** Optional: background-position für backgroundImageCss */
+  backgroundPositionCss?: string;
+  /** Optional: background-size für backgroundImageCss (z.B. '105%') */
+  backgroundSizeCss?: string;
+  /** Optional: Überschreibt die minimale Section-Höhe */
+  heightClassName?: string;
+  /** Optional: object-position pro Slide (z. B. "center 20%") */
+  imageObjectPositionsCss?: string[];
   showCta?: boolean;
   compact?: boolean;
   align?: "center" | "left";
@@ -30,6 +40,11 @@ export default function Hero({
   subtitle,
   label,
   images = DEFAULT_IMAGES,
+  backgroundImageCss = null,
+  backgroundPositionCss = "center",
+  backgroundSizeCss = "cover",
+  heightClassName,
+  imageObjectPositionsCss,
   showCta = true,
   compact = false,
   align = "center",
@@ -72,13 +87,26 @@ export default function Hero({
     };
   }, [scrollReveal]);
 
+  const resolvedHeightClassName = heightClassName ?? (compact ? "min-h-[40vh]" : "min-h-[70vh]");
+
   return (
     <section
-      className={`relative w-full overflow-hidden bg-gray-900 ${compact ? "min-h-[40vh]" : "min-h-[70vh]"} flex items-center justify-center`}
+      className={`relative w-full overflow-hidden bg-gray-900 ${resolvedHeightClassName} flex items-center justify-center`}
       aria-label="Hero-Bereich"
     >
       <div className="absolute inset-0">
-        {hasSlider ? (
+        {backgroundImageCss ? (
+          <div
+            className="absolute inset-0"
+            aria-hidden="true"
+            style={{
+              backgroundImage: `url(${backgroundImageCss})`,
+              backgroundSize: backgroundSizeCss,
+              backgroundPosition: backgroundPositionCss,
+              backgroundRepeat: "no-repeat",
+            }}
+          />
+        ) : hasSlider ? (
           images.map((src, i) => (
             <div
               key={src}
@@ -95,6 +123,9 @@ export default function Hero({
                 sizes="100vw"
                 quality={95}
                 priority={i === 0}
+                style={{
+                  objectPosition: imageObjectPositionsCss?.[i],
+                }}
               />
             </div>
           ))
@@ -107,10 +138,13 @@ export default function Hero({
             sizes="100vw"
             quality={95}
             priority
+            style={{
+              objectPosition: imageObjectPositionsCss?.[0],
+            }}
           />
         )}
         <div
-          className="absolute inset-0 bg-black/50 z-[1]"
+          className="absolute inset-0 bg-black/45 z-[1]"
           aria-hidden="true"
         />
       </div>
@@ -179,13 +213,13 @@ export default function Hero({
           {showCta && (
             <div className={scrollReveal ? "mt-8 hero-style-reveal-cta" : variant === "homepage" ? "mt-8 animate-hero-cta" : "mt-8"}>
               <Button
-                href="/buchung"
+                href="tel:03692127026"
                 variant="primaryInvert"
                 showArrow
                 aria-label="Termin vereinbaren"
                 className={variant === "homepage" ? "w-full sm:w-auto" : ""}
               >
-                Termin vereinbaren
+                03692127026
               </Button>
             </div>
           )}

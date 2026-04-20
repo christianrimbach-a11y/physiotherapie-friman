@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CookieBanner from "@/components/sections/CookieBanner";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -13,11 +14,11 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "Physiotherapie Frimann | Ihre Praxis für Bewegung und Gesundheit",
+    default: "Physiotherapie Frimann Wutha-Farnroda | Beweglichkeit, Schmerzlinderung & Prävention",
     template: "%s | Physiotherapie Frimann",
   },
   description:
-    "Physiotherapie Frimann – professionelle Behandlungen, Manuelle Therapie, Stoßwellentherapie und mehr. Termin vereinbaren.",
+    "Wir sind Ihre Physiotherapeuten in Wutha-Farnroda: persönliche Betreuung, moderne Behandlung und gezielte Unterstützung bei Schmerzen, Rehabilitation und Prävention, von Krankengymnastik bis manuelle Therapie.",
   openGraph: {
     locale: "de_DE",
   },
@@ -36,6 +37,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

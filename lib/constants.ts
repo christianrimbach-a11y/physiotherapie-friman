@@ -22,7 +22,7 @@ export const SOCIAL_LINKS = [
 
 export const CONTACT = {
   phone: "03692127026",
-  email: "info@physiotherapie-frimann.de",
+  email: "info@physiotherapie-friman.de",
   address: "Ruhlaer Straße 121–123, 99848 Wutha-Farnroda",
   mapsUrl: "https://www.google.com/maps?q=Ruhlaer+Stra%C3%9Fe+121-123+99848+Wutha-Farnroda&z=16&output=embed",
   mapsLink: "https://www.google.com/maps/search/?api=1&query=Ruhlaer+Straße+121-123+99848+Wutha-Farnroda",
@@ -34,3 +34,7 @@ export const CONTACT = {
     { days: "Freitag", hours: "08:00 – 14:00" },
   ],
 } as const;
+
+/** Dezente einzeilige Anzeige für den Desktop-Header */
+export const OPENING_HOURS_HEADER_DESKTOP_LINE =
+  "Öffnungszeiten: Mo 8–14 · Di 9–18 · Mi geschlossen · Do 9–18 · Fr 8–14";

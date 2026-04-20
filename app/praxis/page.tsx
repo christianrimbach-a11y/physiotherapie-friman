@@ -10,14 +10,15 @@ import { HERO_REVEAL_DURATION_MS } from "@/lib/animationConfig";
 export const metadata: Metadata = {
   title: "Unsere Praxis",
   description:
-    "Unsere Praxisräume – modern, hell und einladend. Lernen Sie unsere Behandlungsräume kennen.",
+    "Bei Physiotherapie Friman in Wutha-Farnroda: moderne, helle Räume für Ihre Behandlung, von Krankengymnastik und manueller Therapie bis Rehabilitation und Training.",
 };
 
 const GALLERY_IMAGES = [
-  { src: "/images/praxis-rezeption-front.jpg", alt: "Empfangsbereich der Physiotherapie Friman" },
-  { src: "/images/praxis-wartebereich-rot.jpg", alt: "Wartebereich mit roten Stühlen in der Praxis" },
-  { src: "/images/praxis-behandlungsraum-fenster.jpg", alt: "Behandlungsraum mit Liege am Fenster" },
-  { src: "/images/praxis-bereich-schwarze-wand.jpg", alt: "Moderner Praxisbereich mit schwarzer Wand und Pflanzen" },
+  { src: "/images/praxis-gallery-01-aussenansicht.png", alt: "Außenansicht des Praxisgebäudes" },
+  { src: "/images/praxis-gallery-02-rezeption.png", alt: "Rezeption der Physiotherapie Friman" },
+  { src: "/images/praxis-gallery-03-wartebereich.png", alt: "Wartebereich mit Fenster und Pflanzen" },
+  { src: "/images/praxis-gallery-04-behandlungsraum-1.png", alt: "Behandlungsraum 1" },
+  { src: "/images/praxis-gallery-05-behandlungsraum-2.png", alt: "Behandlungsraum 2" },
 ];
 
 export default function PraxisPage() {
@@ -25,11 +26,15 @@ export default function PraxisPage() {
     <>
       <Hero
         title="Unsere Praxis"
-        subtitle="Ein Ort der Ruhe und professionellen Betreuung."
+        subtitle="Hier arbeiten wir ruhig, hell und aufmerksam, mit Blick auf Ihre Behandlung und Erholung."
         images={["/images/placeholder.svg"]}
         showCta={false}
         compact
         scrollReveal
+        backgroundImageCss="/images/praxis-hero-neu.jpg"
+        backgroundPositionCss="center 22%"
+        backgroundSizeCss="cover"
+        heightClassName="min-h-[420px] sm:min-h-[480px] md:min-h-[560px] lg:min-h-[600px] xl:min-h-[640px]"
       />
 
       <section className="w-full bg-offWhite py-16 md:py-20 mt-16 md:mt-20">
@@ -37,12 +42,11 @@ export default function PraxisPage() {
           <Reveal variant="fadeUp" durationMs={HERO_REVEAL_DURATION_MS}>
             <div className="text-center max-w-[900px] mx-auto mb-16">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Allgemeine Praxisübersicht
+                Ein Rundgang bei uns: Empfang, Warten, Behandlung
               </h2>
               <div className="heading-divider mx-auto mt-4" aria-hidden="true" />
               <p className="mt-4 text-gray-600 leading-relaxed">
-                Unsere Praxis ist modern und barrierefrei gestaltet. Wir legen
-                Wert auf eine ruhige Atmosphäre, in der Sie sich wohlfühlen können.
+                Bei uns treffen Sie auf hellen, barrierearmen Zugang und eine ruhige Atmosphäre. So können Sie sich vor und nach der Behandlung entspannt auf Ihre Physiotherapie in Wutha-Farnroda einlassen.
               </p>
             </div>
           </Reveal>
@@ -66,7 +70,7 @@ export default function PraxisPage() {
               </Reveal>
               <Reveal variant="fadeXLeft" delayMs={180} durationMs={1700}>
                 <p className="mt-4 text-gray-600 leading-relaxed">
-                  Unsere Behandlungsräume sind hell, modern und einladend gestaltet. Hier finden krankengymnastische und manuelle Behandlungen, Massagen sowie Lymphdrainage in ruhiger Atmosphäre statt. Wir legen Wert auf eine Ausstattung, die eine professionelle und zugleich angenehme Therapie ermöglicht.
+                  In unseren Behandlungsräumen arbeiten wir hell, modern und zurückhaltend im Design, damit der Fokus bei Ihnen und Ihrer Behandlung bleibt. Hier finden unter anderem Krankengymnastik, manuelle Therapie, Massagen und Lymphdrainage statt, immer in einem Rahmen, der professionell wirkt und sich zugleich gut anfühlt.
                 </p>
               </Reveal>
             </div>
@@ -118,7 +122,7 @@ export default function PraxisPage() {
               </Reveal>
               <Reveal variant="fadeX" delayMs={180} durationMs={1700}>
                 <p className="mt-4 text-gray-600 leading-relaxed">
-                  Unser Sport- bzw. Trainingsraum ist mit Geräten für Rehabilitation und gezieltes Aufbautraining ausgestattet. Hier unterstützen wir Sie bei der Wiederherstellung Ihrer Leistungsfähigkeit, beim Muskelaufbau und bei der Prävention – individuell angepasst an Ihre Ziele.
+                  In unserem Trainingsbereich begleiten wir Sie bei Rehabilitation und kräftigendem Aufbautraining, mit Geräten und Übungen, die zu Ihrem Stand und Ihren Zielen passen. Gemeinsam arbeiten wir daran, Ihre Leistungsfähigkeit zu verbessern, Muskelkraft aufzubauen und langfristig präventiv vorzusorgen.
                 </p>
               </Reveal>
             </div>

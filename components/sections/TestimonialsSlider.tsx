@@ -83,7 +83,7 @@ export default function TestimonialsSlider({ testimonials }: TestimonialsSliderP
         onTouchEnd={onTouchEnd}
       >
         <div
-          className="flex gap-6 transition-transform duration-500 ease-in-out"
+          className="flex gap-0 transition-transform duration-500 ease-in-out"
           style={{
             transform: `translateX(-${clampedPage * pageStepPercent}%)`,
             width: `${sliderWidthPercent}%`,
@@ -92,7 +92,7 @@ export default function TestimonialsSlider({ testimonials }: TestimonialsSliderP
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="flex-shrink-0 min-h-[200px]"
+              className="flex-shrink-0 min-h-[240px] px-2 sm:px-4"
               style={{ width: `${cardWidthPercent}%` }}
             >
               <TestimonialCard

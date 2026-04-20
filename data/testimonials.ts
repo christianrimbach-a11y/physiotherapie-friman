@@ -8,32 +8,20 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "1",
-    name: "Maria K.",
-    text: "Sehr kompetent und einfühlsam. Nach meiner Knie-OP hat mich die Therapie schnell wieder mobil gemacht. Kann ich nur empfehlen!",
+    name: "Lina Eisenhuth",
+    text: "Sehr empfehlenswerte Praxis! Rudolf hat mir mit einer erfolgreichen Stoßwellenbehandlung am Knie geholfen, Inna mit gezielten Behandlungen bei Rückenproblemen. Beide arbeiten professionell und nehmen sich Zeit. Tolles Team und angenehme Atmosphäre!",
     rating: 5,
   },
   {
     id: "2",
-    name: "Thomas S.",
-    text: "Endlich jemand, der sich Zeit nimmt und die Ursache angeht – nicht nur die Symptome. Die Manuelle Therapie hat mir sehr geholfen.",
+    name: "Jörg Uwe Schäfer",
+    text: "Wer in Eisenach kompetente Hilfe sucht, ist bei Familie Friman genau richtig. Fachlich absolut top, die Therapie ist effektiv und die Atmosphäre in der Praxis ist sehr angenehm. Beide sind super freundlich und hilfsbereit.",
     rating: 5,
   },
   {
     id: "3",
-    name: "Anna L.",
-    text: "Angenehme Atmosphäre, professionelles Team. Ich fühle mich gut aufgehoben und habe meine Beschwerden deutlich verbessern können.",
-    rating: 5,
-  },
-  {
-    id: "4",
-    name: "Peter M.",
-    text: "Von der ersten Behandlung an ein vertrauensvoller Kontakt. Die Lymphdrainage wurde genau erklärt und hat spürbar geholfen.",
-    rating: 5,
-  },
-  {
-    id: "5",
-    name: "Sabine W.",
-    text: "Prävention wird hier großgeschrieben. Ich komme regelmäßig zur Vorbeugung und fühle mich bestens betreut.",
+    name: "Tina Engel",
+    text: "Das Team ist superlieb, total professionell und fachlich wirklich top. Ich komme schon seit vielen Jahren hierher und fühle mich jedes Mal bestens betreut. Absolut empfehlenswert!",
     rating: 5,
   },
 ];

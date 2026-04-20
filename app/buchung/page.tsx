@@ -5,7 +5,7 @@ import BookingForm from "@/components/forms/BookingForm";
 export const metadata: Metadata = {
   title: "Termin vereinbaren",
   description:
-    "Vereinbaren Sie online einen Termin in der Physiotherapie Frimann. Wir melden uns zeitnah bei Ihnen.",
+    "Terminanfrage bei Physiotherapie Friman in Wutha-Farnroda: Füllen Sie das Formular aus. Wir melden uns zeitnah und besprechen mit Ihnen die nächsten Schritte Ihrer Behandlung.",
 };
 
 export default function BuchungPage() {
@@ -17,8 +17,7 @@ export default function BuchungPage() {
           <h1 className="text-3xl font-bold text-gray-900 mt-2">Termin vereinbaren</h1>
           <div className="heading-divider" aria-hidden="true" />
           <p className="mt-4 text-gray-600">
-            Füllen Sie das Formular aus. Wir setzen uns in Kürze mit Ihnen in
-            Verbindung, um Ihren Wunschtermin zu bestätigen.
+            Füllen Sie die Felder aus. Wir melden uns in Kürze bei Ihnen, um Ihren Wunschtermin zu klären und kurz über Ihre Behandlung zu sprechen.
           </p>
           <div className="mt-10">
             <BookingForm />

@@ -21,8 +21,8 @@ const CONTENT_DELAY_MS = 200;
 
 export default function CTASectionReveal({
   title = "Bereit für Ihren Termin?",
-  subtitle = "Vereinbaren Sie jetzt einen Termin in unserer Praxis. Wir freuen uns auf Sie.",
-  buttonText = "Termin vereinbaren",
+  subtitle = "Wir sind für Sie da: Rufen Sie uns an. Wir beraten Sie persönlich zu Ihrer Behandlung und einem passenden Termin in Wutha-Farnroda.",
+  buttonText = "03692127026",
   backgroundImage = DEFAULT_BG,
   backgroundImages,
   className = "",
@@ -114,7 +114,7 @@ export default function CTASectionReveal({
             </p>
           )}
           <div className="mt-8">
-            <Button href="/buchung" variant="primaryInvert" showArrow aria-label={buttonText}>
+            <Button href="tel:03692127026" variant="primaryInvert" showArrow aria-label={buttonText}>
               {buttonText}
             </Button>
           </div>
