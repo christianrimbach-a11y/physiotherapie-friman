@@ -17,7 +17,11 @@ export const NAV_LINKS_FOOTER = [
 
 export const SOCIAL_LINKS = [
   { href: "https://instagram.com", label: "Instagram", ariaLabel: "Instagram öffnen" },
-  { href: "https://facebook.com", label: "Facebook", ariaLabel: "Facebook öffnen" },
+  {
+    href: "https://www.facebook.com/share/1KHxhfFuEF/?mibextid=wwXIfr",
+    label: "Facebook",
+    ariaLabel: "Facebook öffnen",
+  },
 ] as const;
 
 export const CONTACT = {
